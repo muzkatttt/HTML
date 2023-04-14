@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title> Столярная мастерская В. Могилева </title>
     <link rel="stylesheet" href="mySite.css">
 </head>
@@ -77,18 +78,49 @@
     </section>
     </div>
     </section>
-    <footer>
-        <p class="foo"> Связаться с нами:</p>
-        <ul>
-            <li><a href="#"> Вконтакте</a></li>
-            <li><a href="#"> Телеграм</a></li>
-            <li><a href="#"> Контактный телефон </a></li>
-        </ul>
-        <p> &copy; <span>2023</span> Мастерская Василия Могилева | Проект сайта подготовлен <a> Muzkat </a></p>
-    </footer>
-    <script>
+
+    <script language="JavaScript" type="text/javascript">
+
+        function ValidMail() {
+            var prov = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+            var myMail = document.getElementById('email').value;
+            var valid = prov.test(myMail);
+            if (valid) output = 'Введен корректный адрес электронной почты';
+            else output = 'Адрес электронной почты введен некорректно';
+            document.getElementById('message').innerHTML = output;
+            return valid;
+        }
+
+        function ValidPhone() {
+            var prov = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+            var myPhone = document.getElementById('phone').value;
+            var valid = prov.test(myPhone);
+            if (valid) output = 'Введен корректный номер телефона';
+            else output = 'Номер телефона введен некорректно!';
+            document.getElementById('message').innerHTML = document.getElementById('message').innerHTML + '<br />' + output;
+            return valid;
+        }
     </script>
 </body>
 
 </html>
 <footer>
+    <div class="message">
+        <p class="foo"> связаться с нами:</p>
+        <form id="contact" action="#" method="post" name="contact" class="col">
+
+            E-mail: <input id="email" class="text_footer" name="email" type="email" placeholder="Введите e-mail"
+                class="col" /><br />
+            Телефон: <input id="phone" class="text_footer" name="phone" type="phone" placeholder="Ваш телефон" /><br />
+            <input name="button" type="submit" value="Отправить" onClick="ValidMail(); ValidPhone();" class="col" />
+        </form>
+    </div>
+    <div>
+        <ul>
+            <a href="#"> Вконтакте</a><a href="@muzkatttt">| Телеграм |</a><a href="+79872330036">Телефон</a>
+        </ul>
+        <p> &copy; <span>2023</span>Мастерская Василия Могилева | Проект сайта подготовлен<a>Muzkat</a></p>
+    </div>
+</footer>
+
+</html>
