@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<User>
+	<initials>
+		<name>Анна</name>
+		<second_name>Карпова</second_name>
+		<last_name>Александровна</last_name>
+	</initials>
+	<date_of_birthday>2008</date_of_birthday>
+	<group>
+		<number_of_group>8</number_of_group>
+		<letter_of_group>А</letter_of_group>
+	</group>
+	<adress>
+		<city>Москва</city>
+		<street>Ленинский проспект</street>
+		<house>2</house>
+		<flat>277</flat>
+	</adress>
+</User>
+<User>
+	<initials>
+		<name>Михаил</name>
+		<second_name>Малышкин</second_name>
+		<last_name>Иванович</last_name>
+	</initials>
+	<date_of_birthday>2014</date_of_birthday>
+	<group>
+		<number_of_group>2</number_of_group>
+		<letter_of_group>Б</letter_of_group>
+	</group>
+	<adress>
+		<city>Москва</city>
+		<street>Ленинградское шоссе</street>
+		<house>10</house>
+		<flat>56</flat>
+	</adress>
+</User>
+<User>
+	<initials>
+		<name>Алла</name>
+		<second_name>Андреева</second_name>
+		<last_name>Петровна</last_name>
+	</initials>
+	<date_of_birthday>2015</date_of_birthday>
+	<group>
+		<number_of_group>1</number_of_group>
+		<letter_of_group>Г</letter_of_group>
+	</group>
+	<adress>
+		<city>Москва</city>
+		<street>Дмитровское</street>
+		<house>107</house>
+		<flat>2</flat>
+	</adress>
+</User>
