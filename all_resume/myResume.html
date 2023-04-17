@@ -1,0 +1,264 @@
+<?php
+$name = 'Ekaterina Rodionova';
+$profession = 'Engineer';
+$city_country = 'Agryz, Russia';
+$e_mail = 'emrodionova@bk.ru';
+$phone = '+7 987 233 00 36';
+$age_years =  2023 - 1986;
+$age_days = $age_years * 365;
+$skills = [
+    [
+        'name' => 'SAP',
+        'percent' => 100,
+    ],
+    [
+        'name' => 'Python',
+        'percent' => 50,
+    ],
+    [
+        'name' => 'MS Office',
+        'percent' => 99,
+    ],
+    [
+        'name' => 'Lean Production',
+        'percent' => 99,
+    ],
+    
+];
+$job = [
+            'job_name' => ['Russian Railways', 'RA Dvizhok'],
+            'job_data' => ['2014 - present time', '2007 - 2010'],
+            'job_desc' => ['Engineer', 'Manager'],
+            'job_about' => ['Rationing of labor. Consulting on remuneration issues. Employee bonuses. Introduction of lean manufacturing tools', 'Outdoor advertising sales'],
+];
+
+$education = [
+            'education_name' => ['GeekBrains', 'Ural State University of Railway Transport', 'Samara State University of Railway Transport', 'Udmurt State University'],
+            'education_data' => ['2022 - present time', '2020', '2018', '2011'],
+            'education_degree' => ['Developer', 'Economist', 'Locomotives', 'Documentologist'],
+];
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Jost', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="https://imgfon.ru/Images/Details_img_880px/Animals/glaza-belyy_fon-kotik-morda-polosatyy.webp"
+              style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2>
+                <?php echo $name;?>
+              </h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $profession;?>
+            </p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $city_country;?>
+            </p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $e_mail;?>
+            </p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+              <?php echo $phone;?>
+            </p>
+            <p><i class="fa fa-user-o fa-fw w3-margin-right w3-large w3-text-teal"></i></i>
+              <?php echo $age_years;?> years (
+              <?php echo $age_days;?>&nbsp;days)
+            </p>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <?php for($i = 0; $i < count($skills); $i++):?>
+            <p>
+              <?php echo $skills[$i]['name'];?>
+            </p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width:<?php echo $skills[$i]['percent'];?>%">
+                <?php echo $skills[$i]['percent'];?>%
+              </div>^
+            </div>
+            <?php endfor;?>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+            <p>English</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+            </div>
+            <br>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work experience</h2>
+          <div class="w3-container">
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $job['job_name'][0]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $job['job_data'][0]; ?>
+            </h6>
+            <p>
+              <?php echo $job['job_desc'][0]; ?>
+            </p>
+            <p>
+              <?php echo $job['job_about'][0]; ?>
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $job['job_name'][1]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $job['job_data'][1]; ?>
+            </h6>
+            <p>
+              <?php echo $job['job_desc'][1]; ?></b></h5>
+            <p>
+              <?php echo $job['job_about'][1]; ?>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+
+
+                <?php echo $education['education_name'][0]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][0]; ?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][0]; ?>
+            </p>
+
+            <hr>
+          </div>
+
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][1]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][1]; ?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][1]; ?>
+            </p>
+            <hr>
+          </div>
+
+
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][2]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][2]; ?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][2]; ?>
+            </p>
+            <hr>
+          </div>
+
+
+
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>
+                <?php echo $education['education_name'][3]; ?>
+              </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $education['education_data'][3]; ?>
+            </h6>
+            <p>
+              <?php echo $education['education_degree'][3]; ?>
+            </p>
+            <hr>
+          </div>
+
+        </div><br>
+      </div>
+    </div>
+
+    <!-- End Right Column -->
+  </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <p>Find me on social media</p>
+    <i class="fa fa-vk" aria-hidden="true"> <a href="https://vk.com/muzkat" /> </i>
+    <i class="fa fa-telegram" aria-hidden="true"> </i>
+    <i class="fa fa-github" aria-hidden="true"> </i>
+    <i class="fa fa-linkedin w3-hover-opacity"> </i>
+    <i class="fa fa-whatsapp" aria-hidden="true"> </i>
+    <!-- End footer -->
+  </footer>
+
+</body>
+
+</html>
